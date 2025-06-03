@@ -2,43 +2,68 @@
 
 ---
 
-# svelte app
+# Svelte + Vite App
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+This project has been modernized to use [Svelte 4](https://svelte.dev) and [Vite](https://vitejs.dev) as the bundler and development server.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+## Requirements
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+- [Node.js](https://nodejs.org) v18 or higher recommended
+- npm v9 or higher
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+## Installation
 
-
-## Get started
-
-Install the dependencies...
+Install the dependencies:
 
 ```bash
-cd svelte-app
 npm install
 ```
 
-...then start [Rollup](https://rollupjs.org):
+## Development
+
+Start the development server with Vite:
 
 ```bash
 npm run dev
 ```
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+This will open the app at [http://localhost:5173](http://localhost:5173) by default.
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+## Available Scripts
 
+- `npm run dev`: Start the development server
+- `npm run build`: Create an optimized production build
+- `npm run preview`: Serve the production build locally
 
-## Building and running in production mode
+## Project Structure
 
-To create an optimised version of the app:
+- `src/` — App source code (components, stores, etc.)
+- `public/` — Static assets (favicon, global.css, etc.)
+- `index.html` — App entry point (must be in the project root for Vite)
+- `vite.config.mjs` — Vite configuration
+
+## Migration
+
+This project was migrated from Rollup to Vite and upgraded to Svelte 4. If you encounter issues with legacy components, check the [Svelte 3 to 4 migration guide](https://github.com/sveltejs/svelte/blob/master/CHANGELOG.md#400).
+
+## Production
+
+To build the optimized app:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+Happy coding with Svelte + Vite!
+
 
 ```bash
 npm run build
